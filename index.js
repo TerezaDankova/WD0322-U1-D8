@@ -71,7 +71,7 @@ console.log(secondObject)
 
 console.log("\n--------------EXERCISE 6--------------");
 
-let totalShoppingCart = 30;
+let totalShoppingCart = 99;
 
 if(totalShoppingCart > 50){
   console.log("You have to pay:", totalShoppingCart,"which encludes a free shipping.")
@@ -87,8 +87,10 @@ if(totalShoppingCart > 50){
 
 console.log("\n--------------EXERCISE 7--------------");
 
+let shippingCost = 10
+
 let discountedTotalShoppingCart = totalShoppingCart - totalShoppingCart + 0.2;
-let discountedShippingCost = shipping - shippingCost + 0.2;
+let discountedShippingCost = shippingCost - shippingCost + 0.2;
 console.log("You spent:", discountedTotalShoppingCart);
 
 if (discountedTotalShoppingCart > 50) {
@@ -205,25 +207,38 @@ console.log(thisArray.reverse())
 
 console.log("\n--------------EXERCISE EXTRA 2--------------");
 
-
+console.log("The maximum numerical value is:", Math.max(...thisArray))
 
 /* EXTRA 3
  Write a piece of code for getting the minimum numerical value from an array.
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n--------------EXERCISE EXTRA 3--------------");
+
+console.log("The minimum numerical value is:", Math.min(...thisArray))
 
 /* EXTRA 4
  Write a piece of code for getting only even numerical values from an array.
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n--------------EXERCISE EXTRA 4--------------");
+
+let arr = [1, 3, 5,] //arr[2] 
+let results = []
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i]% 2 == 0){
+    results.push(arr[i])
+  }
+}
+console.log(results)
 
 /* EXTRA 5
  Write a piece of code for deleting only even entries from an array.
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n--------------EXERCISE EXTRA 5--------------");
+
+
 
 /* EXTRA 6
  Write a piece of code for removing all the vowels from a string.
@@ -241,5 +256,3 @@ console.log("\n--------------EXERCISE EXTRA 2--------------");
  Replace all the strings contained in an array with their length.
  es.: ["strive", "is", "great"] => [6, 2, 5]
 */
-
-/* WRITE YOUR ANSWER HERE */

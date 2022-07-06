@@ -87,8 +87,15 @@ if(totalShoppingCart > 50){
 
 console.log("\n--------------EXERCISE 7--------------");
 
+let discountedTotalShoppingCart = totalShoppingCart - totalShoppingCart + 0.2;
+let discountedShippingCost = shipping - shippingCost + 0.2;
+console.log("You spent:", discountedTotalShoppingCart);
 
-
+if (discountedTotalShoppingCart > 50) {
+  console.log("You are eligible for a free shipping!");
+} else {
+  discountedTotalShoppingCart +- discountedShippingCost;
+}
 
 /* EXERCISE 8
  Create a variable and assign to it an object representing a car, with properties like brand, model and licensePlate.
@@ -162,7 +169,10 @@ let carsForSale = []
 carsForSale.push("car number three:", carThree, "car number four:", carFour, "car number five:", carFive);
 console.log("CARS FOR SALE",carsForSale)
 
-let totalCars = 
+let totalCars = {
+  carsForRent: carsForRent.length,
+  carsForSale: carsForRent.length
+}
 
 
 /* EXERCISE 13
@@ -171,8 +181,8 @@ let totalCars =
 
 console.log("\n--------------EXERCISE 13--------------");
 
-for(let i = 0;i<carsForRent.length; i++)
-console.log(carsForRent[i])
+for(let i = 0;i<carsForSale.length; i++){
+console.log(carsForSale[i].brand, carsForSale[i].model, carsForSale[i].licencePlate)}
 
 // Additional assignments for Day 4
 

@@ -89,6 +89,7 @@ console.log("\n--------------EXERCISE 7--------------");
 
 
 
+
 /* EXERCISE 8
  Create a variable and assign to it an object representing a car, with properties like brand, model and licensePlate.
  Then clone it 5 times, and change the licensePlate for each cloned car without affecting the original one.
@@ -138,29 +139,40 @@ console.log("\n--------------EXERCISE 10--------------");
 let removeFirstCar = carsForRent.splice(0, 2);
 console.log(carsForRent);
 
-carsForRent.pop();
+let removeLastCar = carsForRent.splice(carsForRent.length - 2, 2)
 console.log(carsForRent);
-
 
 /* EXERCISE 11
  Print to the console the type of the car variable you created before, as well as the types of its licensePlate and brand properties.
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n--------------EXERCISE 11--------------");
+
+console.log(typeof car.brand, typeof car.model, typeof car.licensePlate);
+
 
 /* EXERCISE 12
  Create a new variable called carsForSale assigning to it an empty array, and then insert 3 cars into it.
  Create a new variable called totalCars and assign to it the total number of cars present in the carsForSale and carsForRent arrays.
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n--------------EXERCISE 12--------------");
+
+let carsForSale = []
+carsForSale.push("car number three:", carThree, "car number four:", carFour, "car number five:", carFive);
+console.log("CARS FOR SALE",carsForSale)
+
+let totalCars = 
+
 
 /* EXERCISE 13
  Using a loop, print to the console all the data for each car in the carsForSale array.
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n--------------EXERCISE 13--------------");
 
+for(let i = 0;i<carsForRent.length; i++)
+console.log(carsForRent[i])
 
 // Additional assignments for Day 4
 
@@ -170,17 +182,20 @@ console.log(carsForRent);
  es:
  [1, 3, 5] ==> [5, 3, 1]
 */
-/* let firstArray = [1, 3, 5]
 
-console.log(firstArray.reverse())*/
+console.log("\n--------------EXERCISE EXTRA 1--------------");
+
+let thisArray = [1, 3, 5]
+
+console.log(thisArray.reverse())
 
 /* EXTRA 2
  Write a piece of code for getting the maximum numerical value from an array.
 */
 
-/* let firstArray = [1, 3, 5]
+console.log("\n--------------EXERCISE EXTRA 2--------------");
 
-console.log(firstArray.reverse())*/
+
 
 /* EXTRA 3
  Write a piece of code for getting the minimum numerical value from an array.

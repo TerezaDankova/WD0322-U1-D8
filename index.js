@@ -71,13 +71,14 @@ console.log(secondObject)
 
 console.log("\n--------------EXERCISE 6--------------");
 
-let totalShoppingCart = 99;
+let totalShoppingCart = 80;
+let shippingCost = 10;
 
 if(totalShoppingCart > 50){
-  console.log("You have to pay:", totalShoppingCart,"which encludes a free shipping.")
+  console.log("The total amount is:", totalShoppingCart,"You have a free shipping! Congrats!")
 } else {
   (totalShoppingCart < 50)
-  console.log("You have to pay:", totalShoppingCart,"plus shipping costs",10, "that means the total amount is:", 40)
+  console.log("The total amount is:", totalShoppingCart + shippingCost, "included 10 for the shipping.")
 }
 
 /* EXERCISE 7
@@ -87,16 +88,18 @@ if(totalShoppingCart > 50){
 
 console.log("\n--------------EXERCISE 7--------------");
 
-let shippingCost = 10
+let discount = 0.2;
 
-let discountedTotalShoppingCart = totalShoppingCart - totalShoppingCart + 0.2;
-let discountedShippingCost = shippingCost - shippingCost + 0.2;
+let discountedShoppingCart = totalShoppingCart * discount;
+let discountedTotalShoppingCart = totalShoppingCart - discountedShoppingCart
+
 console.log("You spent:", discountedTotalShoppingCart);
 
-if (discountedTotalShoppingCart > 50) {
-  console.log("You are eligible for a free shipping!");
+if(totalShoppingCart > 50){
+  console.log("The total amount is:", totalShoppingCart,"You have a free shipping! Congrats!")
 } else {
-  discountedTotalShoppingCart +- discountedShippingCost;
+  (totalShoppingCart < 50)
+  console.log("The total amount is:", totalShoppingCart + shippingCost, "included 10 for the shipping.")
 }
 
 /* EXERCISE 8
@@ -183,8 +186,9 @@ let totalCars = {
 
 console.log("\n--------------EXERCISE 13--------------");
 
-for(let i = 0;i<carsForSale.length; i++){
-console.log(carsForSale[i].brand, carsForSale[i].model, carsForSale[i].licencePlate)}
+for (let i = 0; i < carsForSale.length; i++){
+console.log(carsForSale[i].brand, carsForSale[i].model, carsForSale[i].licencePlate)
+}
 
 // Additional assignments for Day 4
 
@@ -223,14 +227,15 @@ console.log("The minimum numerical value is:", Math.min(...thisArray))
 
 console.log("\n--------------EXERCISE EXTRA 4--------------");
 
-let arr = [1, 3, 5,] //arr[2] 
-let results = []
-for (let i = 0; i < arr.length; i++) {
-  if (arr[i]% 2 == 0){
-    results.push(arr[i])
+let thisArrayTwo = [2, 7, 9, 10, 11]
+let onlyEvenNumbers = []
+
+for (let i = 0; i < thisArrayTwo.length; i++) {
+  if(i % 2 === 0) { // index is even
+      onlyEvenNumbers.push(thisArrayTwo[i]);
   }
 }
-console.log(results)
+console.log(onlyEvenNumbers)
 
 /* EXTRA 5
  Write a piece of code for deleting only even entries from an array.
@@ -238,21 +243,52 @@ console.log(results)
 
 console.log("\n--------------EXERCISE EXTRA 5--------------");
 
+let thisArrayThree = [1, 2, 5, 3, 22, 21, 43, 43, 432, 346]
 
+var noEvenNumbers = []
+ 
+for (let i = 0; i < thisArrayThree.length; i++) {
+  if (thisArrayThree[i] % 2 !== 0) // index is not even
+     noEvenNumbers.push(thisArrayThree[i])
+}
+
+console.log(noEvenNumbers)
 
 /* EXTRA 6
  Write a piece of code for removing all the vowels from a string.
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n--------------EXERCISE EXTRA 6--------------");
+
+let vowels = "Hello world"
+let removingVowels = vowels.replace( /[aeiou]/ig, '' )
+
+console.log(removingVowels)
 
 /* EXTRA 7
  Write a piece of code for increasing all the numerical values in a array by 1.
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n--------------EXERCISE EXTRA 7--------------");
+
+let thisArrayFour = [1, 2, 3, 4];
+let increasingArray = thisArrayFour.map(i => i+1);
+
+console.log(increasingArray);
 
 /* EXTRA 8 
  Replace all the strings contained in an array with their length.
  es.: ["strive", "is", "great"] => [6, 2, 5]
 */
+
+console.log("\n--------------EXERCISE EXTRA 8--------------");
+
+let thisArrayFive = ["strive", "is", "great"];
+let newArr = [];
+
+for (let i = 0 ; i < thisArrayFive.length; i++) {
+ newArr.push(thisArrayFive[i].length)
+}
+
+console.log(newArr)
+console.log("--------------------------------------------");
